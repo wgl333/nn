@@ -107,7 +107,8 @@ def sigmoid_ce(logits, labels):
 
 # 测试逻辑
 test_data = np.random.normal(size=[10]).astype(np.float32)
-labels = np.random.randint(0, 2, size=[10]).astype(np.float32)
+labels = np.random.randint(0, 2, size=[10]).astype(np.float32) # 生成随机标签
+# 使用均匀分布生成10个随机整数，范围在[0, 2)之间（即0或1）
 
 # 对比 TensorFlow  原始结果和自定义函数结果
 tf_loss = tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(labels = labels, logits = test_data))
