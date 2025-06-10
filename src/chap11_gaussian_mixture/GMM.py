@@ -289,7 +289,7 @@ if __name__ == "__main__":
     # 左图：真实聚类
     plt.subplot(1, 2, 1)
     plt.scatter(X[:, 0], X[:, 1], c=y_true, cmap='viridis', s=15, alpha=0.8)
-    plt.title("真实聚类", fontsize=12)
+    plt.title("真实聚类", fontsize=12)# 设置子图标题为"真实聚类"，字体大小为1
     plt.xlabel("特征1", fontsize=10)
     plt.ylabel("特征2", fontsize=10)
     plt.grid(True, linestyle='--', alpha=0.5)
