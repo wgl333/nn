@@ -275,7 +275,7 @@ class World(object): # Carla 仿真世界的核心管理类，负责初始化和
 
         # Spawn the player.
         if self.player is not None:
-            spawn_point = self.player.get_transform()
+            spawn_point = self.player.get_transform() # 获取玩家车辆的当前变换（位置和旋转）
             spawn_point.location.z += 2.0
             spawn_point.rotation.roll = 0.0
             spawn_point.rotation.pitch = 0.0
