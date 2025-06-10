@@ -346,6 +346,7 @@ def is_reverse(seq, rev_seq):
     else:
         return False
 # 测试函数功能
+# 直接打印 zip(*sequence_reversal()) 的结果（转换为列表后）
 print([is_reverse(*item) for item in list(zip(*sequence_reversal()))])
 print(list(zip(*sequence_reversal())))
 
