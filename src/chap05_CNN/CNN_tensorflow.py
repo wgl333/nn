@@ -184,6 +184,8 @@ h_fc1_drop = tf.nn.dropout(h_fc1, keep_prob)
 # 全连接层 2
 ## fc2 layer ##
 W_fc2 = weight_variable([1024, 10])
+# 创建全连接层的偏置变量
+# 输出维度是10（对应10个类别）
 b_fc2 = bias_variable([10])
 prediction = tf.nn.softmax(tf.matmul(h_fc1_drop, W_fc2) + b_fc2)
 
