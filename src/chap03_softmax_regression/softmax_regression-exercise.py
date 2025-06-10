@@ -123,6 +123,7 @@ def compute_loss(pred, labels, num_classes=3):
     acc = tf.reduce_mean(
         tf.cast(
             tf.equal(
+                # 获取预测结果的类别索引（argmax 沿着类别维度）
                 tf.argmax(pred, axis=1),
                 tf.argmax(one_hot_labels, axis=1)
             ),
