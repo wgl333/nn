@@ -100,7 +100,8 @@ class ReversiEnv(gym.Env):
         self.done = False
 
         # Let the opponent play if it's not the agent's turn
-        if self.player_color != self.to_play:
+        if self.player_color != self.to_play:# 如果不符，则由对手执行策略
+    # 调用对手的策略函数，传入当前状态，获取对手的动作
             a = self.opponent_policy(self.state)
             ReversiEnv.make_place(self.state, a, ReversiEnv.BLACK)
             self.to_play = ReversiEnv.WHITE
