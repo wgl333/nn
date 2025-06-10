@@ -109,6 +109,8 @@ register(
 # 月球着陆器连续动作版本
 register(
     id='LunarLanderContinuous-v2',  
+     # 指定环境的入口点（实现位置）
+    # 这里指向gym库中box2d模块下的LunarLanderContinuous类
     entry_point='gym.envs.box2d:LunarLanderContinuous',
     max_episode_steps=1000,
     reward_threshold=200,
