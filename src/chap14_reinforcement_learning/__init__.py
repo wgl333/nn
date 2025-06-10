@@ -165,7 +165,7 @@ register(
 # 冰湖行走（8x8网格版）
 register(
     id='FrozenLake8x8-v0',
-    entry_point='gym.envs.toy_text:FrozenLakeEnv',
+    entry_point='gym.envs.toy_text:FrozenLakeEnv', # 传递给环境构造函数的额外参数（关键字参数）
     kwargs={'map_name' : '8x8'},
     max_episode_steps=200,
     reward_threshold=0.99, # optimum = 1
