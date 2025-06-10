@@ -76,6 +76,7 @@ class LogisticRegression():
         l2_reg = tf.keras.regularizers.l2(0.01)
         # 初始化权重变量W，形状为[2, 1]，初始值在-0.1到0.1之间均匀分布，并应用L2正则化
         self.W = tf.Variable(
+             # 使用均匀分布初始化权重值
             initial_value=tf.random.uniform(
                 shape=[2, 1], minval=-0.1, maxval=0.1
             ),
