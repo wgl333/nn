@@ -284,6 +284,7 @@ class ReversiEnv(gym.Env):
 
     @staticmethod
     def make_place(board, action, player_color):
+     # 将动作转换为棋盘上的坐标
         coords = ReversiEnv.action_to_coordinate(board, action)
 
         d = board.shape[-1]
