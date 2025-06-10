@@ -71,7 +71,7 @@ class RNN_model(nn.Module):
         c0 = torch.zeros(2, batch_input.size(1), self.lstm_dim)
 
         # 如果有GPU可用，将张量移动到GPU
-        if torch.cuda.is_available():
+        if torch.cuda.is_available(): # 如果CUDA可用，将初始隐藏状态h0转移到GPU上
             h0 = h0.cuda()
             c0 = c0.cuda()
             batch_input = batch_input.cuda()
