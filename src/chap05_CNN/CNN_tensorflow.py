@@ -194,6 +194,7 @@ cross_entropy = tf.reduce_mean(
 train_step = tf.train.AdamOptimizer(learning_rate).minimize(cross_entropy)
 
 with tf.Session() as sess:
+    # 初始化所有全局变量
     init = tf.global_variables_initializer()
     sess.run(init)
     
