@@ -177,7 +177,8 @@ register(
 register(
     id='FrozenLake8x8-v0',
     entry_point='gym.envs.toy_text:FrozenLakeEnv',
-    kwargs={'map_name' : '8x8'},
+    kwargs={'map_name' : '8x8'},# 设置单个episode的最大步数限制
+    # 如果在这个步数内没有完成，episode将自动终止
     max_episode_steps=200,
     reward_threshold=0.99, # optimum = 1
 )
